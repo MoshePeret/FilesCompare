@@ -17,6 +17,14 @@ type FileCompareConfig struct {
 type Application struct {
 	ApplicationName string `json:"ApplicationName"`
 	Path            string `json:"Path"`
+	IsRemote        bool   `json:"IsRemote"`
+	IP              string `json:"IP"`
+	Auth            Auth   `json:"Auth"`
+}
+
+type Auth struct {
+	Username string `json:"Username"`
+	Password string `json:"Password"`
 }
 
 func InitConfigDir() {
@@ -55,6 +63,16 @@ func initJsonData(file *os.File) {
 		{
 			ApplicationName: "App A",
 			Path:            "\\path\\to\\application_A\\folder",
+			IsRemote:        false,
+		},
+		{
+			ApplicationName: "App B",
+			Path:            "\\path\\to\\application_B\\folder",
+			IsRemote:        true,
+			Auth: Auth{
+				Username: "admin",
+				Password: "admin",
+			},
 		},
 	}
 	result.FilesToCompare = []string{"compare.json"}

@@ -1,17 +1,5 @@
-,Reference File,App B,App A
-compare.json
-connection.indexSettings.dependencies.number_of_shards,1,2,2
+,Reference File
+field,reference.yaml,A.yaml,B.yaml
 connection.pingInterval,1000,999,999
-Creation Date,2024-02-11 20:45:39 +0200 IST,2024-02-12 23:01:42.5645549 +0200 IST,2024-02-11 20:45:39 +0200 IST
-Modification Date,2024-02-11 20:45:39 +0200 IST,2024-02-12 23:01:42.5645549 +0200 IST,2024-02-11 20:45:39 +0200 IST
-
-
-
-compareB.json
-Creation Date,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST
-Modification Date,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST
-connection.indexSettings.dependencies.number_of_shards,1,2
-connection.pingInterval,1000,999
-
-
-
+Creation Date,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST
+Modification Date,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST,2024-02-11 20:45:39 +0200 IST

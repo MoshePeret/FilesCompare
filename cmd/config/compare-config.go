@@ -2,6 +2,7 @@ package config
 
 import (
 	"FilesCompare/cmd"
+	"FilesCompare/cmd/remote"
 	"FilesCompare/cmd/utils"
 	"FilesCompare/pkg"
 	"fmt"
@@ -40,6 +41,12 @@ func compareConfigCmd() *cobra.Command {
 
 			if err := mapstructure.Decode(config, &FileCompareConfig); err != nil {
 				log.Fatalln("Error decoding settings:", err)
+			}
+
+			for _, app := range FileCompareConfig.CompareApplications {
+				if app.IsRemote {
+					remote.Connection(app.IP, app.Auth)
+				}
 			}
 
 			getFilesPaths()
